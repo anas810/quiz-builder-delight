@@ -3,9 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { QUESTION_POOL, getRank, type QuizQuestion } from "@/lib/quiz-data";
 import { cardPath, tweetUrl } from "@/lib/share";
 import { playEnter, playSelect, playFanfare } from "@/lib/sfx";
-import bannerAsset from "@/assets/featured-game-banner.gif.asset.json";
-
-const bannerUrl = bannerAsset.url;
+import bannerUrl from "@/assets/featured-game-banner.gif";
 import { BrandWordmark } from "@/components/brand-wordmark";
 
 export const Route = createFileRoute("/")({
