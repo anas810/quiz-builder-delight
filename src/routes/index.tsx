@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { QUESTION_POOL, getRank, type QuizQuestion } from "@/lib/quiz-data";
 import { cardPath, tweetUrl } from "@/lib/share";
-import { playEnter, playSelect, playDescend, playFanfare } from "@/lib/sfx";
+import { playEnter, playSelect, playFanfare } from "@/lib/sfx";
 import bannerAsset from "@/assets/featured-game-banner.gif.asset.json";
 
 const bannerUrl = bannerAsset.url;
@@ -80,7 +80,7 @@ function Index() {
       playFanfare();
       setPhase("done");
     } else {
-      playDescend();
+      playSelect();
       setCurrent((c) => c + 1);
     }
   };
@@ -253,6 +253,7 @@ function Index() {
                 href={tweetHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={playSelect}
                 className="rounded-2xl border-2 border-black bg-cyan px-10 py-5 font-display text-xl text-dungeon shadow-[0_8px_0_#000] transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_3px_0_#000]"
               >
                 Post on X 𝕏
@@ -261,6 +262,7 @@ function Index() {
                 <a
                   href={cardPath(score)}
                   download={`maze-of-gains-${score}-of-${TOTAL_QUESTIONS}.png`}
+                  onClick={playSelect}
                   className="rounded-xl border-2 border-black bg-gold px-5 py-3 font-display text-sm text-dungeon"
                 >
                   Save card
