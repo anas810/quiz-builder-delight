@@ -70,12 +70,6 @@ export const QUESTION_POOL: QuizQuestion[] = [
     difficulty: "easy",
   },
   {
-    question: "How do you move and attack in a run?",
-    options: ["Mouse clicks only", "The arrow keys", "WASD only", "Tapping the minimap"],
-    correctIndex: 1,
-    difficulty: "easy",
-  },
-  {
     question: "What do you look for to reach the next floor?",
     options: ["A portal", "Stairs", "A ladder", "A teleport scroll"],
     correctIndex: 1,
